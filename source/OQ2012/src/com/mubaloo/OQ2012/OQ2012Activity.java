@@ -1,5 +1,9 @@
 package com.mubaloo.OQ2012;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,10 +13,16 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
@@ -73,6 +83,9 @@ public class OQ2012Activity extends Activity
     	OpenFeint.initialize(this, settings, new OpenFeintDelegate() {});
 
         //UI
+    	View layout = findViewById(R.id.relativeLayout);
+        layout.setBackgroundResource(R.drawable.background);
+    	
         customFont 	= Typeface.createFromAsset(getAssets(), "fonts/LONDON2012.TTF");
         
         b_play = (Button) findViewById(R.id.b_play);
@@ -95,15 +108,17 @@ public class OQ2012Activity extends Activity
         b_info.setTextColor(Color.WHITE);
         b_info.setTypeface(customFont);
         
-        //Read File
+        b_countdown = (Button) findViewById(R.id.b_countdown);
+        b_countdown.setText("DAYS TO GO...");
+        b_countdown.setTextColor(Color.WHITE);
+        b_countdown.setTypeface(customFont);
+        
+        //Read Preferences File
         SharedPreferences myStats = this.getSharedPreferences("myStats", Context.MODE_PRIVATE);
         r_goldmedals = myStats.getInt("gold_medals", 0);
         r_silvermedals = myStats.getInt("silver_medals", 0);
         r_bronzemedals = myStats.getInt("bronze_medals", 0);
         r_points = myStats.getInt("points", 0);
-        
-        //Countdown
-        countdown();
 
 		// Button actions
 		View.OnClickListener handler = new View.OnClickListener() 
@@ -115,7 +130,9 @@ public class OQ2012Activity extends Activity
 				{
 				case R.id.b_play:
 					//GO TO SCREEN
+					Bundle bundleQ = new Bundle();
 					Intent play_Intent = new Intent(v.getContext(), Question.class);
+					play_Intent.putExtras(bundleQ);
 					startActivityForResult(play_Intent, 0);
 					break;
 
@@ -124,14 +141,23 @@ public class OQ2012Activity extends Activity
 					Dashboard.open();
 					break;
 
-				case R.id.b_follow: {
+				case R.id.b_follow:
 					//GO TO SCREEN
-					postLeaderboard("Gold", 25);
-				}
-				break;
+					String url = "http://www.london2012.com/";  
+					Intent i = new Intent(Intent.ACTION_VIEW);  
+					i.setData(Uri.parse(url));  
+					startActivity(i);
+					break;
 
 				case R.id.b_info:
 					//GO TO SCREEN
+					Intent info_Intent = new Intent(v.getContext(), Info.class);
+					startActivityForResult(info_Intent, 0);
+					break;
+					
+				case R.id.b_countdown:
+					//DO
+					countdown();
 					break;
 				}	
 			}
@@ -141,6 +167,7 @@ public class OQ2012Activity extends Activity
 		b_stats.setOnClickListener(handler);
 		b_follow.setOnClickListener(handler);
 		b_info.setOnClickListener(handler);
+		b_countdown.setOnClickListener(handler);
     }
     
     @Override
@@ -161,70 +188,61 @@ public class OQ2012Activity extends Activity
     	new Handler().postDelayed(myAnimation, 1000);
 	}
     
-    @Override
-   	protected void onStop() 
-   	{	
-       	super.onStop();
-        
-       	//Write
-        w_goldmedals 	= r_goldmedals; 	//+ new medals
-        w_silvermedals	= r_silvermedals;	//+ new medals
-        w_bronzemedals 	= r_bronzemedals; 	//+ new medals
-        w_points 		= r_points; 		//+ new points
-        SharedPreferences myStats = this.getSharedPreferences("myStats", Context.MODE_PRIVATE);
-        SharedPreferences.Editor myStatsEditor = myStats.edit();
-        myStatsEditor.putInt("gold_medals", w_goldmedals);
-        myStatsEditor.putInt("silver_medals", w_silvermedals);
-        myStatsEditor.putInt("bronze_medals", w_bronzemedals);
-        myStatsEditor.putInt("points", w_points);
-        myStatsEditor.commit();
-   	}
-    
     private void countdown()
     {
     	Calendar c = Calendar.getInstance();
     	int start_day = 208+1;	// 27 July + leap year
     	int current_day = c.get(Calendar.DAY_OF_YEAR);
     	int days = start_day-current_day;
-        
-        b_countdown = (Button) findViewById(R.id.b_countdown);
-        b_countdown.setText("DAYS TO GO: "+ days);
-        b_countdown.setTextColor(Color.WHITE);
-        b_countdown.setTypeface(customFont);
+        b_countdown.setText(""+days);
     }
     
     public OQ2012Activity getInstance()
    	{
    		return instance;
    	}
-    
-    public void setGoldMedals(int newGold)
-   	{
-   		w_goldmedals = r_goldmedals + newGold;
-   	}
-    
-    public void setSilverMedals(int newSilver)
-   	{
-   		w_silvermedals = r_silvermedals + newSilver;
-   	}
-    public void setBronzeMedals(int newBronze)
-   	{
-   		w_bronzemedals = r_bronzemedals + newBronze;
-   	}
-    public void setPoints(int newPoints)
-   	{
-   		w_points = r_points + newPoints;
-   	}
-
 
 	//post score to OpenFeint leaderboards
 	public void postLeaderboard(String BoardName, int score) {
 		String UniqueID="0"; //initialize value but it should get overwritten
-		if (BoardName=="Points") UniqueID="1105627";
-		if (BoardName=="Gold") UniqueID="1105787";
-		if (BoardName=="Silver") UniqueID="1105797";
-		if (BoardName=="Bronze") UniqueID="1105807";
-		long scoreValue = (long) score; //THE SCORE TO BE ADDED
+		long scoreValue = 0; //THE SCORE TO BE ADDED
+		
+		//Declare prefernces file
+		SharedPreferences myStats = this.getSharedPreferences("myStats", Context.MODE_PRIVATE);
+		SharedPreferences.Editor myStatsEditor = myStats.edit();
+		
+		if (BoardName=="Points")
+		{
+			UniqueID="1105627";
+			w_points = r_points + score;
+			scoreValue = (long)w_points;
+			myStatsEditor.putInt("points", w_points);
+		}
+			
+		if (BoardName=="Gold")
+		{
+			UniqueID="1105787";
+			w_goldmedals = r_goldmedals + score;
+			scoreValue = (long)w_goldmedals;
+			myStatsEditor.putInt("gold_medals", w_goldmedals);
+		}
+		if (BoardName=="Silver")
+		{
+			UniqueID="1105797";
+			w_silvermedals = r_silvermedals + score;
+			scoreValue = (long)w_silvermedals;
+			myStatsEditor.putInt("silver_medals", w_silvermedals);
+		}
+		if (BoardName=="Bronze")
+		{
+			UniqueID="1105807";
+			w_bronzemedals = r_bronzemedals + score;
+			scoreValue = (long)w_bronzemedals;
+			myStatsEditor.putInt("bronze_medals", w_bronzemedals);
+		}
+		
+		myStatsEditor.commit();
+		
 		Score s = new Score(scoreValue, null); // Second parameter is null to indicate that custom display text is not used.
 		Leaderboard l = new Leaderboard(UniqueID);
 		s.submitTo(l, new Score.SubmitToCB() {
