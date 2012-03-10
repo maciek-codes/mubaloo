@@ -63,19 +63,20 @@ public final class R {
         public static final int torch5=0x7f02002b;
     }
     public static final class id {
-        public static final int answer=0x7f09001e;
+        public static final int answer=0x7f09001f;
         public static final int b_countdown=0x7f09001a;
         public static final int b_follow=0x7f090018;
         public static final int b_info=0x7f090019;
         public static final int b_play=0x7f090016;
         public static final int b_stats=0x7f090017;
         public static final int button1=0x7f090003;
-        public static final int countryName=0x7f09001c;
-        public static final int countryQuestion=0x7f09001d;
-        public static final int exit_feint=0x7f090021;
+        public static final int countryName=0x7f09001d;
+        public static final int countryQuestion=0x7f09001e;
+        public static final int exit_feint=0x7f090022;
         public static final int feedback=0x7f090000;
+        public static final int flagLayout=0x7f09001c;
         public static final int frameLayout=0x7f09000d;
-        public static final int home=0x7f09001f;
+        public static final int home=0x7f090020;
         public static final int iv_torch=0x7f09001b;
         public static final int linearLayout1=0x7f090015;
         public static final int nested_window_root=0x7f09000c;
@@ -94,7 +95,7 @@ public final class R {
         public static final int of_text2=0x7f090013;
         public static final int progress=0x7f09000b;
         public static final int relativeLayout=0x7f090014;
-        public static final int settings=0x7f090020;
+        public static final int settings=0x7f090021;
         public static final int tv_info=0x7f090002;
         public static final int web_view=0x7f09000e;
     }
