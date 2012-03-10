@@ -36,7 +36,8 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
 	public int score;
 	public int country;
 	private Bundle bundle = new Bundle();
-	
+	public long start;
+	public long duration;
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.question);
@@ -105,6 +106,7 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
 	        List<String> answerList = new ArrayList<String>(answ.keySet());
 	        Collections.shuffle(answerList);
 	        String[] Answers = answerList.toArray(new String[answerList.size()]);
+	        start = System.currentTimeMillis();
 	        answer_list.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, Answers));
 	        answer_list.setOnItemClickListener(this);
 	        
@@ -124,23 +126,24 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
 		}
     }
 	
-/*	private void timerTest()
+	/*private void timerTest()
 	{
 		new CountDownTimer(20000, 1000) 
 		{
 			public void onTick(long millisUntilFinished) 
 			{
-				b_info.setText("" + millisUntilFinished / 1000);
-	}
+				time++;
+			}
 
-	public void onFinish() 
-	{
-	b_info.setText("done!");
-	}
-	}.start();
+			public void onFinish() 
+			{
+				return time;
+			}
+		}.start();
 	}*/
     public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-		
+    	
+    	duration = System.currentTimeMillis() - start;
     	if(answer_list == null)
     		return;
     	
@@ -150,6 +153,7 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
     	else bundle.putString("Feedback", "false");
     	bundle.putInt("number", i);
     	bundle.putInt("Score", score);
+    	bundle.putLong("Duration", duration);
     	Intent ans_Intent = new Intent(this.getBaseContext(), Answer.class);
    		ans_Intent.putExtras(bundle);
 		startActivityForResult(ans_Intent, 0);

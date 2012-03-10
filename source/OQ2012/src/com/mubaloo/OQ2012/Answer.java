@@ -12,6 +12,7 @@ public class Answer extends Activity implements OnClickListener {
 	private Bundle bundleQ = new Bundle();
 	int i;
 	int score;
+	long duration;
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.answer);
@@ -24,12 +25,13 @@ public class Answer extends Activity implements OnClickListener {
         String param1 = bundle.getString("Feedback");
         i = bundle.getInt("number");
         score = bundle.getInt("Score");
+        duration = bundle.getLong("Duration");
         
         Button next = (Button) findViewById(R.id.next);
         
         if(param1.equalsIgnoreCase("true")){
         	score++;
-        	feedback.setText(score + " "+ i + "Congrats");
+        	feedback.setText(score + " "+ i + " " + duration + "Congrats");
         	
         }
         else feedback.setText("!Congrats"); 
