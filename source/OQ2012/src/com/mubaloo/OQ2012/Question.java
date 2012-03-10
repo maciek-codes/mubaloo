@@ -70,8 +70,10 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
 			String html = new String(buf.toByteArray());
 			if(!html.startsWith("["))
 				html = "["+html+"]";
+
 			JSONArray jsons = new JSONArray(html);
 			jsonObj = jsons.getJSONObject(country);
+
 			getName = jsonObj.getString("name");
 			countryName.setText(getName);
 			JSONArray questions = jsonObj.getJSONArray("questions");
