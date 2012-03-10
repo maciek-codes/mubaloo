@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -91,8 +92,8 @@ public class OQ2012Activity extends Activity
 				{
 					case R.id.b_play:
 						//GO TO SCREEN
-						//Intent info_Intent = new Intent(v.getContext(), Info.class);
-						//startActivityForResult(info_Intent, 0);
+						Intent play_Intent = new Intent(v.getContext(), Question.class);
+						startActivityForResult(play_Intent, 0);
 					break;
 					
 					case R.id.b_stats:
@@ -109,6 +110,11 @@ public class OQ2012Activity extends Activity
 				}	
 			}
 		};
+		
+		b_play.setOnClickListener(handler);
+		b_stats.setOnClickListener(handler);
+		b_follow.setOnClickListener(handler);
+		b_info.setOnClickListener(handler);
 
     }
 		
