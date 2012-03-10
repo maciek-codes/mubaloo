@@ -20,6 +20,10 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -48,7 +52,6 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
         
         answer_list = (ListView)findViewById(R.id.answer);
         InputStream is;
-        String URL1 = "http://sharp-snow-6521.herokuapp.com/countries.json";
         JSONObject jsonObj;
         
         try {
@@ -57,7 +60,7 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
         	int start_day = 208+1; // 27 July + leap year
         	int current_day = c.get(Calendar.DAY_OF_YEAR);
         	int country = 149 - (start_day-current_day);
-        	
+        	String URL1 = "http://sharp-snow-6521.herokuapp.com/countries/"+country+".json";
         	
         	is = new URL(URL1).openConnection().getInputStream();
 			BufferedInputStream bis = new BufferedInputStream(is);
@@ -69,14 +72,33 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
 			}
 			
 			String html = new String(buf.toByteArray());
-			if(!html.startsWith("["))
-				html = "["+html+"]";
-
-			JSONArray jsons = new JSONArray(html);
-			jsonObj = jsons.getJSONObject(country);
+			
+			jsonObj = new JSONObject(html);
 
 			getName = jsonObj.getString("name");
 			countryName.setText(getName);
+			
+			// Get flag
+			View layout = findViewById(R.id.flagLayout); 
+			try 
+			{
+			String imageUrl = jsonObj.getString("image_url");
+			Bitmap bitmap = BitmapFactory.decodeStream(
+					(InputStream)new URL(imageUrl).getContent());
+			Drawable d = new BitmapDrawable(bitmap);
+			layout.setBackgroundDrawable(d);
+			} 
+			catch (MalformedURLException e) 
+			{
+			layout.setBackgroundResource(R.drawable.background);
+			e.printStackTrace();
+			} 
+			catch (IOException e) 
+			{
+			layout.setBackgroundResource(R.drawable.background); 
+			e.printStackTrace();
+			}
+			
 			JSONArray questions = jsonObj.getJSONArray("questions");
 			JSONObject questionObj;
 			bundle = this.getIntent().getExtras();
