@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.mubaloo.OQ2012;
+package com.openfeint.api;
 
 public final class R {
     public static final class attr {
