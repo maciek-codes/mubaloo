@@ -17,17 +17,20 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.openfeint.api.OpenFeint;
 import com.openfeint.api.OpenFeintDelegate;
 import com.openfeint.api.OpenFeintSettings;
+import com.openfeint.api.resource.Leaderboard;
+import com.openfeint.api.resource.Score;
 import com.openfeint.api.ui.Dashboard;
 
 public class OQ2012Activity extends Activity 
 {
 	// OOP elements
 	private static OQ2012Activity instance;
-	
+
 	// UI elements
 	private Button b_play;
 	private Button b_stats;
@@ -101,37 +104,39 @@ public class OQ2012Activity extends Activity
         
         //Countdown
         countdown();
-        
-        // Button actions
-        View.OnClickListener handler = new View.OnClickListener() 
-        {
+
+		// Button actions
+		View.OnClickListener handler = new View.OnClickListener() 
+		{
 			@Override
 			public void onClick(View v) 
 			{
 				switch(v.getId())
 				{
-					case R.id.b_play:
-						//GO TO SCREEN
-						Intent play_Intent = new Intent(v.getContext(), Question.class);
-						startActivityForResult(play_Intent, 0);
+				case R.id.b_play:
+					//GO TO SCREEN
+					Intent play_Intent = new Intent(v.getContext(), Question.class);
+					startActivityForResult(play_Intent, 0);
 					break;
-					
-					case R.id.b_stats:
-						//GO TO SCREEN
-						Dashboard.open();
+
+				case R.id.b_stats:
+					//GO TO SCREEN
+					Dashboard.open();
 					break;
-					
-					case R.id.b_follow:
-						//GO TO SCREEN
-					break;
-					
-					case R.id.b_info:
-						//GO TO SCREEN
+
+				case R.id.b_follow: {
+					//GO TO SCREEN
+					postLeaderboard("Gold", 25);
+				}
+				break;
+
+				case R.id.b_info:
+					//GO TO SCREEN
 					break;
 				}	
 			}
 		};
-		
+
 		b_play.setOnClickListener(handler);
 		b_stats.setOnClickListener(handler);
 		b_follow.setOnClickListener(handler);
@@ -210,5 +215,26 @@ public class OQ2012Activity extends Activity
    	{
    		w_points = r_points + newPoints;
    	}
-		
+
+
+	//post score to OpenFeint leaderboards
+	public void postLeaderboard(String BoardName, int score) {
+		String UniqueID="0"; //initialize value but it should get overwritten
+		if (BoardName=="Points") UniqueID="1105627";
+		if (BoardName=="Gold") UniqueID="1105787";
+		if (BoardName=="Silver") UniqueID="1105797";
+		if (BoardName=="Bronze") UniqueID="1105807";
+		long scoreValue = (long) score; //THE SCORE TO BE ADDED
+		Score s = new Score(scoreValue, null); // Second parameter is null to indicate that custom display text is not used.
+		Leaderboard l = new Leaderboard(UniqueID);
+		s.submitTo(l, new Score.SubmitToCB() {
+			@Override public void onSuccess(boolean newHighScore) { 		// sweet, score was posted
+				OQ2012Activity.this.setResult(Activity.RESULT_OK);
+			}
+			@Override public void onFailure(String exceptionMessage) {
+				Toast.makeText(OQ2012Activity.this, "Error (" + exceptionMessage + ") posting score.", Toast.LENGTH_SHORT).show();
+				OQ2012Activity.this.setResult(Activity.RESULT_CANCELED);
+			}
+		}); 
+	}
 }
