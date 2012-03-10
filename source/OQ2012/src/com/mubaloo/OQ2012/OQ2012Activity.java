@@ -98,7 +98,9 @@ public class OQ2012Activity extends Activity
 				{
 				case R.id.b_play:
 					//GO TO SCREEN
+					Bundle bundleQ = new Bundle();
 					Intent play_Intent = new Intent(v.getContext(), Question.class);
+					play_Intent.putExtras(bundleQ);
 					startActivityForResult(play_Intent, 0);
 					break;
 
