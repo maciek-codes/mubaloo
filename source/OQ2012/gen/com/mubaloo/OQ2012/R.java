@@ -56,33 +56,41 @@ public final class R {
         public static final int torch5=0x7f020027;
     }
     public static final class id {
-        public static final int exit_feint=0x7f080012;
-        public static final int frameLayout=0x7f080009;
-        public static final int home=0x7f080010;
-        public static final int nested_window_root=0x7f080008;
-        public static final int of_achievement_icon=0x7f080001;
-        public static final int of_achievement_icon_frame=0x7f080002;
-        public static final int of_achievement_notification=0x7f080000;
-        public static final int of_achievement_progress_icon=0x7f080006;
-        public static final int of_achievement_score=0x7f080004;
-        public static final int of_achievement_score_icon=0x7f080005;
-        public static final int of_achievement_text=0x7f080003;
-        public static final int of_icon=0x7f08000c;
-        public static final int of_ll_logo_image=0x7f08000b;
-        public static final int of_text=0x7f08000d;
-        public static final int of_text1=0x7f08000e;
-        public static final int of_text2=0x7f08000f;
-        public static final int progress=0x7f080007;
-        public static final int settings=0x7f080011;
-        public static final int web_view=0x7f08000a;
+        public static final int answer=0x7f080015;
+        public static final int button1=0x7f080002;
+        public static final int countryName=0x7f080013;
+        public static final int countryQuestion=0x7f080014;
+        public static final int exit_feint=0x7f080018;
+        public static final int feedback=0x7f080000;
+        public static final int frameLayout=0x7f08000c;
+        public static final int home=0x7f080016;
+        public static final int nested_window_root=0x7f08000b;
+        public static final int next=0x7f080001;
+        public static final int of_achievement_icon=0x7f080004;
+        public static final int of_achievement_icon_frame=0x7f080005;
+        public static final int of_achievement_notification=0x7f080003;
+        public static final int of_achievement_progress_icon=0x7f080009;
+        public static final int of_achievement_score=0x7f080007;
+        public static final int of_achievement_score_icon=0x7f080008;
+        public static final int of_achievement_text=0x7f080006;
+        public static final int of_icon=0x7f08000f;
+        public static final int of_ll_logo_image=0x7f08000e;
+        public static final int of_text=0x7f080010;
+        public static final int of_text1=0x7f080011;
+        public static final int of_text2=0x7f080012;
+        public static final int progress=0x7f08000a;
+        public static final int settings=0x7f080017;
+        public static final int web_view=0x7f08000d;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
-        public static final int of_achievement_notification=0x7f030001;
-        public static final int of_native_loader=0x7f030002;
-        public static final int of_nested_window=0x7f030003;
-        public static final int of_simple_notification=0x7f030004;
-        public static final int of_two_line_notification=0x7f030005;
+        public static final int answer=0x7f030000;
+        public static final int main=0x7f030001;
+        public static final int of_achievement_notification=0x7f030002;
+        public static final int of_native_loader=0x7f030003;
+        public static final int of_nested_window=0x7f030004;
+        public static final int of_simple_notification=0x7f030005;
+        public static final int of_two_line_notification=0x7f030006;
+        public static final int question=0x7f030007;
     }
     public static final class menu {
         public static final int of_dashboard=0x7f070000;
