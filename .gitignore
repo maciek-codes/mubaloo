@@ -1,6 +1,7 @@
 source/QQ2012/bin
 source/QQ2012/bin/*
 source/QQ2012/bin/classes/*
+source/QQ2012/bin/com/*
 
 # built application files
 *.apk
