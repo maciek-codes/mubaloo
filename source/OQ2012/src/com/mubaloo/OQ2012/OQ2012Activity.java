@@ -16,7 +16,6 @@ import android.widget.Toast;
 import com.openfeint.api.OpenFeint;
 import com.openfeint.api.OpenFeintDelegate;
 import com.openfeint.api.OpenFeintSettings;
-import com.openfeint.api.resource.Achievement;
 import com.openfeint.api.resource.Leaderboard;
 import com.openfeint.api.resource.Score;
 import com.openfeint.api.ui.Dashboard;
