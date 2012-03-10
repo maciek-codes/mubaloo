@@ -1,11 +1,20 @@
 package com.mubaloo.OQ2012;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.openfeint.api.OpenFeint;
+import com.openfeint.api.OpenFeintDelegate;
+import com.openfeint.api.OpenFeintSettings;
+import com.openfeint.api.ui.Dashboard;
 
 public class OQ2012Activity extends Activity 
 {
@@ -19,8 +28,12 @@ public class OQ2012Activity extends Activity
 	private Button b_info;
 	private Button b_countdown;
     private Typeface customFont;
-    //private ImageView iv_torch;
-    //private AnimationDrawable ad_torch;
+    
+    //Openfeint
+    static final String gameName = "Olympic Quiz 2012";
+	static final String gameID = "464542";
+	static final String gameKey = "ADmARQITd7DzrPxJVKCfQ";
+	static final String gameSecret = "fAaRrBhDRGqhPNcdMRfzhYWPzulq1cNhtglQLMPUhw"; 
 	
     // Called when the activity is first created.
     @Override
@@ -30,6 +43,17 @@ public class OQ2012Activity extends Activity
         setContentView(R.layout.oq2012activity);
         instance = this;
         
+        //OPENFEINT
+        Map<String, Object> options = new HashMap<String, Object>();
+    	//line below used to set orientation
+    	options.put(OpenFeintSettings.RequestedOrientation, ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    	OpenFeintSettings settings = new OpenFeintSettings(gameName, gameKey, gameSecret, gameID);
+    	OpenFeint.initialize(this, settings, new OpenFeintDelegate() {});
+    	
+    	//opens the main openfeint dashboard
+    	Dashboard.open();
+
+        //GRAPHICS
         customFont 	= Typeface.createFromAsset(getAssets(), "fonts/LONDON2012.TTF");
         
         b_play = (Button) findViewById(R.id.b_play);
@@ -56,26 +80,6 @@ public class OQ2012Activity extends Activity
         b_countdown.setText("DAYS TO GO: XXX");
         b_countdown.setTextColor(Color.WHITE);
         b_countdown.setTypeface(customFont);
-        
-        /*
-        iv_torch = (ImageView) findViewById(R.id.iv_torch);
-        iv_torch.setBackgroundResource(R.drawable.torch);
-        ad_torch = (AnimationDrawable) iv_torch.getBackground();
-        ad_torch.start();
-        */
-        
-        /*ad_torch = new AnimationDrawable();
-        ad_torch.addFrame(getResources().getDrawable(R.drawable.torch1),200);
-        ad_torch.addFrame(getResources().getDrawable(R.drawable.torch2),200);
-        ad_torch.addFrame(getResources().getDrawable(R.drawable.torch3),200);
-        ad_torch.addFrame(getResources().getDrawable(R.drawable.torch4),200);
-        ad_torch.addFrame(getResources().getDrawable(R.drawable.torch5),200);
-        ad_torch.setOneShot(false);
-        
-        iv_torch = (ImageView) findViewById(R.id.iv_torch);
-        iv_torch.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
-        iv_torch.setImageDrawable(ad_torch);
-        ad_torch.start();*/
         
         // Button actions
         View.OnClickListener handler = new View.OnClickListener() 
@@ -105,5 +109,7 @@ public class OQ2012Activity extends Activity
 				}	
 			}
 		};
+
     }
+		
 }

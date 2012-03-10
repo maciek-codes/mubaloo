@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="23" version="2.0">
 <workbenchAdvisor/>
-<window height="1159" maximized="true" width="1887" x="0" y="23">
+<window height="1174" maximized="true" width="1920" x="14" y="39">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -21,6 +21,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.layout.LayoutEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -32,21 +34,53 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OlympicQuiz2012.java" partName="OlympicQuiz2012.java" path="/Users/rrendoncepeda/git/mubaloo/source/olympicQuiz2012/src/com/mubaloo/olympicQuiz2012/OlympicQuiz2012.java" title="OlympicQuiz2012.java" tooltip="olympicQuiz2012/src/com/mubaloo/olympicQuiz2012/OlympicQuiz2012.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/olympicQuiz2012/src/com/mubaloo/olympicQuiz2012/OlympicQuiz2012.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="421" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OQ2012Activity.java" partName="OQ2012Activity.java" path="/Users/rrendoncepeda/git/mubaloo/source/OQ2012/src/com/mubaloo/OQ2012/OQ2012Activity.java" title="OQ2012Activity.java" tooltip="OQ2012/src/com/mubaloo/OQ2012/OQ2012Activity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OQ2012/src/com/mubaloo/OQ2012/OQ2012Activity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1550" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="oq2012activity.xml" partName="oq2012activity.xml" path="/Users/rrendoncepeda/git/mubaloo/source/OQ2012/res/layout/oq2012activity.xml" title="oq2012activity.xml" tooltip="OQ2012/res/layout/oq2012activity.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OQ2012/res/layout/oq2012activity.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="poakemon.xml" partName="poakemon.xml" title="poakemon.xml" tooltip="/Users/rrendoncepeda/Documents/MSc/Mobile And Ubiquitous Computing/Coursework/Poakemon/res/layout/poakemon.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/rrendoncepeda/Documents/MSc/Mobile%20And%20Ubiquitous%20Computing/Coursework/Poakemon/res/layout/poakemon.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Poakemon.java" partName="Poakemon.java" title="Poakemon.java" tooltip="/Users/rrendoncepeda/Documents/MSc/Mobile And Ubiquitous Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Poakemon.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/rrendoncepeda/Documents/MSc/Mobile%20And%20Ubiquitous%20Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Poakemon.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="823" selectionOffset="3024" selectionTopPixel="268"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Catchem.java" partName="Catchem.java" title="Catchem.java" tooltip="/Users/rrendoncepeda/Documents/MSc/Mobile And Ubiquitous Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Catchem.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/rrendoncepeda/Documents/MSc/Mobile%20And%20Ubiquitous%20Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Catchem.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="79" selectionOffset="4363" selectionTopPixel="1688"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.drawable.DrawableEditor" name="torch.xml" partName="torch.xml" path="/Users/rrendoncepeda/git/mubaloo/source/OQ2012/res/drawable/torch.xml" title="torch.xml" tooltip="OQ2012/res/drawable/torch.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OQ2012/res/drawable/torch.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BufferRecycler.java" partName="BufferRecycler.java" path="/Users/rrendoncepeda/Downloads/OpenFeintAPI/src/com/openfeint/internal/vendor/org/codehaus/jackson/util/BufferRecycler.java" title="BufferRecycler.java" tooltip="OpenFeintAPI/src/com/openfeint/internal/vendor/org/codehaus/jackson/util/BufferRecycler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OpenFeintAPI/src/com/openfeint/internal/vendor/org/codehaus/jackson/util/BufferRecycler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="899" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="answer.xml" partName="answer.xml" path="/Users/rrendoncepeda/git/mubaloo/source/OQ2012/res/layout/answer.xml" title="answer.xml" tooltip="OQ2012/res/layout/answer.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OQ2012/res/layout/answer.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="question.xml" partName="question.xml" path="/Users/rrendoncepeda/git/mubaloo/source/OQ2012/res/layout/question.xml" title="question.xml" tooltip="OQ2012/res/layout/question.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OQ2012/res/layout/question.xml"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -189,6 +223,7 @@
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
@@ -214,14 +249,138 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/olympicQuiz2012/src/com/mubaloo/olympicQuiz2012/OlympicQuiz2012Activity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/olympicQuiz2012/src/com/mubaloo/olympicQuiz2012/OlympicQuiz2012.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OQ2012/src/com/mubaloo/OQ2012/OQ2012Activity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/OQ2012/res/layout/oq2012activity.xml"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" uri="file:/Users/rrendoncepeda/Documents/MSc/Mobile%20And%20Ubiquitous%20Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Catchem.java"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" uri="file:/Users/rrendoncepeda/Documents/MSc/Mobile%20And%20Ubiquitous%20Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Poakemon.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="" path="/OQ2012/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/OQ2012/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OpenFeintAPI/src/com/openfeint/internal/vendor/org/codehaus/jackson/util/BufferRecycler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/OQ2012/res/layout/answer.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" path="/OQ2012/res/layout/question.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/OQ2012/gen/R.java"/>
 </editors>
-<item historyLabel="OlympicQuiz2012Activity.java" index="0">
-<position info="not_deleted" x="380" y="0"/>
-</item>
-<item active="true" historyLabel="OlympicQuiz2012.java" index="1">
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
 <position/>
+</item>
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="Catchem.java" index="2">
+<position info="not_deleted" x="4363" y="79"/>
+</item>
+<item historyLabel="Poakemon.java" index="3">
+<position info="not_deleted" x="3024" y="823"/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="Poakemon.java" index="3">
+<position info="not_deleted" x="3024" y="823"/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position info="not_deleted" x="2874" y="0"/>
+</item>
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position info="not_deleted" x="2981" y="0"/>
+</item>
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position/>
+</item>
+<item historyLabel="oq2012activity.xml" index="1"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position info="not_deleted" x="1324" y="0"/>
+</item>
+<item historyLabel="OQ2012 Manifest" index="4">
+<position info="not_deleted" x="958" y="0"/>
+</item>
+<item historyLabel="OQ2012 Manifest" index="5"/>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position info="not_deleted" x="1123" y="0"/>
+</item>
+<item historyLabel="BufferRecycler.java" index="6">
+<position info="not_deleted" x="1248" y="0"/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position info="not_deleted" x="95" y="0"/>
+</item>
+<item historyLabel="answer.xml" index="7"/>
+<item historyLabel="question.xml" index="8"/>
+<item historyLabel="BufferRecycler.java" index="6">
+<position info="not_deleted" x="899" y="0"/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position info="not_deleted" x="511" y="0"/>
+</item>
+<item historyLabel="R.java" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="OQ2012Activity.java" index="0">
+<position info="not_deleted" x="511" y="0"/>
+</item>
+<item historyLabel="OQ2012 Manifest" index="5"/>
+<item active="true" historyLabel="OQ2012Activity.java" index="0">
+<position info="not_deleted" x="511" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -240,6 +399,42 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="R.java" tooltip="OQ2012/gen/R.java">
+<persistable path="/OQ2012/gen/R.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="question.xml" tooltip="OQ2012/res/layout/question.xml">
+<persistable path="/OQ2012/res/layout/question.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="answer.xml" tooltip="OQ2012/res/layout/answer.xml">
+<persistable path="/OQ2012/res/layout/answer.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BufferRecycler.java" tooltip="OpenFeintAPI/src/com/openfeint/internal/vendor/org/codehaus/jackson/util/BufferRecycler.java">
+<persistable path="/OpenFeintAPI/src/com/openfeint/internal/vendor/org/codehaus/jackson/util/BufferRecycler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.drawable.DrawableEditor" name="torch.xml" tooltip="OQ2012/res/drawable/torch.xml">
+<persistable path="/OQ2012/res/drawable/torch.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Catchem.java" tooltip="/Users/rrendoncepeda/Documents/MSc/Mobile And Ubiquitous Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Catchem.java">
+<persistable uri="file:/Users/rrendoncepeda/Documents/MSc/Mobile%20And%20Ubiquitous%20Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Catchem.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.drawable.DrawableEditor" name="button.xml" tooltip="OQ2012/res/drawable/button.xml">
+<persistable path="/OQ2012/res/drawable/button.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="OQ2012/AndroidManifest.xml">
+<persistable path="/OQ2012/AndroidManifest.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Poakemon.java" tooltip="/Users/rrendoncepeda/Documents/MSc/Mobile And Ubiquitous Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Poakemon.java">
+<persistable uri="file:/Users/rrendoncepeda/Documents/MSc/Mobile%20And%20Ubiquitous%20Computing/Coursework/Poakemon/src/com/rr1461/poakemon/Poakemon.java"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="poakemon.xml" tooltip="/Users/rrendoncepeda/Documents/MSc/Mobile And Ubiquitous Computing/Coursework/Poakemon/res/layout/poakemon.xml">
+<persistable uri="file:/Users/rrendoncepeda/Documents/MSc/Mobile%20And%20Ubiquitous%20Computing/Coursework/Poakemon/res/layout/poakemon.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.layout.LayoutEditor" name="oq2012activity.xml" tooltip="OQ2012/res/layout/oq2012activity.xml">
+<persistable path="/OQ2012/res/layout/oq2012activity.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OQ2012Activity.java" tooltip="OQ2012/src/com/mubaloo/OQ2012/OQ2012Activity.java">
+<persistable path="/OQ2012/src/com/mubaloo/OQ2012/OQ2012Activity.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OlympicQuiz2012.java" tooltip="olympicQuiz2012/src/com/mubaloo/olympicQuiz2012/OlympicQuiz2012.java">
 <persistable path="/olympicQuiz2012/src/com/mubaloo/olympicQuiz2012/OlympicQuiz2012.java"/>
 </file>

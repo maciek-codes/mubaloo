@@ -657,3 +657,411 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: 0
 
 !ENTRY com.android.ide.eclipse.adt 2 0 2012-03-10 10:56:28.741
 !MESSAGE AndroidManifest: Ignoring unknown 'selecto' XML element
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-03-10 13:21:16.773
+!MESSAGE Unable to read /Users/rrendoncepeda/git/mubaloo/source/OQ2012/AndroidManifest.xml: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/OQ2012/AndroidManifest.xml'.
+!STACK 0
+com.android.io.StreamException: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/OQ2012/AndroidManifest.xml'.
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:49)
+	at com.android.sdklib.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:71)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.build(PreCompilerBuilder.java:318)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/OQ2012/AndroidManifest.xml'.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:793)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:278)
+	at com.android.ide.eclipse.adt.io.IFileWrapper.getContents(IFileWrapper.java:47)
+	... 15 more
+
+!ENTRY org.eclipse.jdt.core 4 4 2012-03-10 13:21:16.801
+!MESSAGE JavaBuilder handling CoreException
+!STACK 1
+org.eclipse.core.runtime.CoreException: File not found: /Users/rrendoncepeda/git/mubaloo/source/OQ2012/bin/com/mubaloo/OQ2012/R$attr.class.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:371)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsByteArray(Util.java:1131)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.writeClassFileCheck(IncrementalImageBuilder.java:883)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.writeClassFileContents(IncrementalImageBuilder.java:825)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFile(AbstractImageBuilder.java:823)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:187)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:508)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:364)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.compile(IncrementalImageBuilder.java:329)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:301)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.build(IncrementalImageBuilder.java:134)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildDeltas(JavaBuilder.java:265)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:193)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.FileNotFoundException: /Users/rrendoncepeda/git/mubaloo/source/OQ2012/bin/com/mubaloo/OQ2012/R$attr.class (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	... 26 more
+!SUBENTRY 1 org.eclipse.core.filesystem 4 271 2012-03-10 13:21:16.802
+!MESSAGE File not found: /Users/rrendoncepeda/git/mubaloo/source/OQ2012/bin/com/mubaloo/OQ2012/R$attr.class.
+!STACK 0
+java.io.FileNotFoundException: /Users/rrendoncepeda/git/mubaloo/source/OQ2012/bin/com/mubaloo/OQ2012/R$attr.class (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.openInputStream(LocalFile.java:362)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:797)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:289)
+	at org.eclipse.jdt.internal.core.util.Util.getResourceContentsAsByteArray(Util.java:1131)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.writeClassFileCheck(IncrementalImageBuilder.java:883)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.writeClassFileContents(IncrementalImageBuilder.java:825)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.writeClassFile(AbstractImageBuilder.java:823)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.acceptResult(AbstractImageBuilder.java:187)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:508)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:364)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.compile(IncrementalImageBuilder.java:329)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:301)
+	at org.eclipse.jdt.internal.core.builder.IncrementalImageBuilder.build(IncrementalImageBuilder.java:134)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildDeltas(JavaBuilder.java:265)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:193)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-03-10 13:21:16.836
+!MESSAGE Parser exception for /Users/rrendoncepeda/git/mubaloo/source/OQ2012/AndroidManifest.xml: The content of elements must consist of well-formed character data or markup.
+!STACK 0
+org.xml.sax.SAXParseException: The content of elements must consist of well-formed character data or markup.
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl.parse(Unknown Source)
+	at com.android.sdklib.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:71)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseForData(AndroidManifestHelper.java:147)
+	at com.android.ide.eclipse.adt.internal.resources.manager.CompiledResourcesMonitor.getRClassName(CompiledResourcesMonitor.java:236)
+	at com.android.ide.eclipse.adt.internal.resources.manager.CompiledResourcesMonitor.loadAndParseRClass(CompiledResourcesMonitor.java:135)
+	at com.android.ide.eclipse.adt.internal.resources.manager.CompiledResourcesMonitor.fileChanged(CompiledResourcesMonitor.java:82)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor.visit(GlobalProjectMonitor.java:196)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:434)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:156)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-03-10 13:21:16.837
+!MESSAGE loadAndParseRClass: failed to find manifest package for project OQ2012
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-03-10 13:21:16.838
+!MESSAGE Parser exception for /Users/rrendoncepeda/git/mubaloo/source/OQ2012/AndroidManifest.xml: The content of elements must consist of well-formed character data or markup.
+!STACK 0
+org.xml.sax.SAXParseException: The content of elements must consist of well-formed character data or markup.
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl.parse(Unknown Source)
+	at com.android.sdklib.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:71)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parseForData(AndroidManifestHelper.java:147)
+	at com.android.ide.eclipse.adt.internal.resources.manager.CompiledResourcesMonitor.getRClassName(CompiledResourcesMonitor.java:236)
+	at com.android.ide.eclipse.adt.internal.resources.manager.CompiledResourcesMonitor.loadAndParseRClass(CompiledResourcesMonitor.java:135)
+	at com.android.ide.eclipse.adt.internal.resources.manager.CompiledResourcesMonitor.fileChanged(CompiledResourcesMonitor.java:82)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$DeltaVisitor.visit(GlobalProjectMonitor.java:196)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at com.android.ide.eclipse.adt.internal.resources.manager.GlobalProjectMonitor$1.resourceChanged(GlobalProjectMonitor.java:434)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:285)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:149)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:395)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1530)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:156)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-03-10 13:21:16.838
+!MESSAGE loadAndParseRClass: failed to find manifest package for project OQ2012
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-03-10 13:23:15.690
+!MESSAGE Parser exception for /Users/rrendoncepeda/git/mubaloo/source/OQ2012/AndroidManifest.xml: The content of elements must consist of well-formed character data or markup.
+!STACK 0
+org.xml.sax.SAXParseException: The content of elements must consist of well-formed character data or markup.
+	at org.apache.xerces.parsers.AbstractSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at org.apache.xerces.jaxp.SAXParserImpl.parse(Unknown Source)
+	at com.android.sdklib.xml.AndroidManifestParser.parse(AndroidManifestParser.java:608)
+	at com.android.ide.eclipse.adt.internal.project.AndroidManifestHelper.parse(AndroidManifestHelper.java:71)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerDeltaVisitor.visit(PreCompilerDeltaVisitor.java:209)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:69)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:80)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:49)
+	at com.android.ide.eclipse.adt.internal.build.builders.PreCompilerBuilder.build(PreCompilerBuilder.java:255)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:199)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:239)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:292)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:295)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:351)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:374)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:143)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui.workbench 4 2 2012-03-10 13:29:16.627
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.compiler.ast.Argument.bind(Argument.java:37)
+	at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.bindArguments(AbstractMethodDeclaration.java:83)
+	at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:418)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1148)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1249)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1047)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1258)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:538)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:793)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:591)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyBuilder.buildSupertypes(HierarchyBuilder.java:115)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:135)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:300)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1263)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:788)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:726)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:678)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:140)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:92)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getMethodOverrideTester(SuperTypeHierarchyCache.java:101)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.getOverrideIndicators(OverrideIndicatorLabelDecorator.java:171)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.computeAdornmentFlags(OverrideIndicatorLabelDecorator.java:136)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.decorate(OverrideIndicatorLabelDecorator.java:273)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:269)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:370)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:330)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.ui 4 4 2012-03-10 13:29:16.628
+!MESSAGE Exception in Decorator. The 'Java Method Override Indicator' decorator will be disabled.
+
+!ENTRY org.eclipse.ui 4 4 2012-03-10 13:29:16.628
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.compiler.ast.Argument.bind(Argument.java:37)
+	at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.bindArguments(AbstractMethodDeclaration.java:83)
+	at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:418)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1148)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1249)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1047)
+	at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1258)
+	at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:538)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:793)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyResolver.resolve(HierarchyResolver.java:591)
+	at org.eclipse.jdt.internal.core.hierarchy.HierarchyBuilder.buildSupertypes(HierarchyBuilder.java:115)
+	at org.eclipse.jdt.internal.core.hierarchy.IndexBasedHierarchyBuilder.build(IndexBasedHierarchyBuilder.java:135)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.compute(TypeHierarchy.java:300)
+	at org.eclipse.jdt.internal.core.hierarchy.TypeHierarchy.refresh(TypeHierarchy.java:1263)
+	at org.eclipse.jdt.internal.core.CreateTypeHierarchyOperation.executeOperation(CreateTypeHierarchyOperation.java:90)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:728)
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:788)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:726)
+	at org.eclipse.jdt.internal.core.SourceType.newSupertypeHierarchy(SourceType.java:678)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:140)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:92)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getMethodOverrideTester(SuperTypeHierarchyCache.java:101)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.getOverrideIndicators(OverrideIndicatorLabelDecorator.java:171)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.computeAdornmentFlags(OverrideIndicatorLabelDecorator.java:136)
+	at org.eclipse.jdt.ui.OverrideIndicatorLabelDecorator.decorate(OverrideIndicatorLabelDecorator.java:273)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:269)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:81)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:365)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:347)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:370)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:330)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2012-03-10 13:44:56.586 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_29
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/rrendoncepeda/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/rrendoncepeda/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-03-10 13:45:06.030
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2012-03-10 13:45:39.095
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-03-10 13:47:00.087 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_29
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/rrendoncepeda/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/rrendoncepeda/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-03-10 13:47:09.211
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2012-03-10 13:47:38.000
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-03-10 13:47:40.736 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_29
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/rrendoncepeda/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/rrendoncepeda/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-03-10 13:47:49.142
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 4 4 2012-03-10 13:51:18.652
+!MESSAGE Invalid preference page path: XML Syntax
+!SESSION 2012-03-10 13:51:28.560 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_29
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/rrendoncepeda/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/rrendoncepeda/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2012-03-10 13:51:47.843
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.android.ide.eclipse.ddms 4 0 2012-03-10 13:52:06.157
+!MESSAGE DDMS files not found: /Users/rrendoncepeda/Downloads/android-sdk-macosx/platform-tools/adb 
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-03-10 13:53:11.492
+!MESSAGE Error: null
+!STACK 0
+java.lang.NullPointerException
+	at com.android.ide.eclipse.adt.internal.actions.SdkManagerAction$1.preInstallHook(SdkManagerAction.java:97)
+	at com.android.sdkuilib.internal.repository.UpdaterData$8.run(UpdaterData.java:1109)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3935)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3612)
+	at com.android.sdkuilib.internal.tasks.ProgressView.startTask(ProgressView.java:161)
+	at com.android.sdkuilib.internal.tasks.ProgressViewFactory.start(ProgressViewFactory.java:44)
+	at com.android.sdkuilib.internal.tasks.ProgressViewFactory.start(ProgressViewFactory.java:39)
+	at com.android.sdkuilib.internal.repository.UpdaterData.installArchives(UpdaterData.java:368)
+	at com.android.sdkuilib.internal.repository.UpdaterData.updateOrInstallAll_WithGUI(UpdaterData.java:702)
+	at com.android.sdkuilib.internal.repository.sdkman2.PackagesPage.onButtonInstall(PackagesPage.java:1030)
+	at com.android.sdkuilib.internal.repository.sdkman2.PackagesPage.access$500(PackagesPage.java:93)
+	at com.android.sdkuilib.internal.repository.sdkman2.PackagesPage$8.widgetSelected(PackagesPage.java:323)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:240)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4125)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1457)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1465)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1270)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3971)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at com.android.sdkuilib.internal.repository.sdkman2.SdkUpdaterWindowImpl2.open(SdkUpdaterWindowImpl2.java:158)
+	at com.android.sdkuilib.repository.SdkUpdaterWindow.open(SdkUpdaterWindow.java:147)
+	at com.android.ide.eclipse.adt.internal.actions.SdkManagerAction.run(SdkManagerAction.java:120)
+	at org.eclipse.ui.internal.PluginAction.runWithEvent(PluginAction.java:251)
+	at org.eclipse.ui.internal.WWinPluginAction.runWithEvent(WWinPluginAction.java:229)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$6.handleEvent(ActionContributionItem.java:452)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4125)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1457)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1480)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1465)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1270)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3971)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3610)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2696)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2660)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2494)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:674)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:667)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+
+!ENTRY org.eclipse.ui 4 4 2012-03-10 14:12:19.570
+!MESSAGE Invalid preference page path: XML Syntax
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2012-03-10 14:20:04.382
+!MESSAGE 
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/OpenFeintAPI/res' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:320)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:194)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:266)
+	at org.eclipse.core.internal.resources.Container.members(Container.java:249)
+	at com.android.ide.eclipse.adt.internal.sdk.Sdk$6.run(Sdk.java:1196)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2012-03-10 14:20:04.383
+!MESSAGE Resource '/OpenFeintAPI/res' does not exist.

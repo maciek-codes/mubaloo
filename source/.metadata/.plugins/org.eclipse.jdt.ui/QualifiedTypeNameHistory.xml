@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.mubaloo.OQ2012.R.layout"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="com.mubaloo.OQ2012.R.id"/>
+<fullyQualifiedTypeName name="com.mubaloo.OQ2012.R.drawable"/>
+<fullyQualifiedTypeName name="android.widget.RelativeLayout.LayoutParams"/>
+<fullyQualifiedTypeName name="android.widget.LinearLayout"/>
+<fullyQualifiedTypeName name="android.widget.LinearLayout.LayoutParams"/>
+</qualifiedTypeNameHistroy>
