@@ -8,10 +8,13 @@
 package com.mubaloo.OQ2012;
 
 public final class R {
+    public static final class anim {
+        public static final int torch=0x7f040000;
+    }
     public static final class attr {
     }
     public static final class color {
-        public static final int of_transparent=0x7f040000;
+        public static final int of_transparent=0x7f050000;
     }
     public static final class drawable {
         public static final int background=0x7f020000;
@@ -50,47 +53,45 @@ public final class R {
         public static final int of_native_loader_progress_11=0x7f020021;
         public static final int of_native_loader_progress_12=0x7f020022;
         public static final int of_notification_bkg=0x7f020023;
-        public static final int torch=0x7f020024;
-        public static final int torch1=0x7f020025;
-        public static final int torch2=0x7f020026;
-        public static final int torch3=0x7f020027;
-        public static final int torch4=0x7f020028;
-        public static final int torch5=0x7f020029;
+        public static final int torch1=0x7f020024;
+        public static final int torch2=0x7f020025;
+        public static final int torch3=0x7f020026;
+        public static final int torch4=0x7f020027;
+        public static final int torch5=0x7f020028;
     }
     public static final class id {
-        public static final int answer=0x7f08001d;
-        public static final int b_countdown=0x7f080019;
-        public static final int b_follow=0x7f080016;
-        public static final int b_info=0x7f080017;
-        public static final int b_play=0x7f080014;
-        public static final int b_stats=0x7f080015;
-        public static final int button1=0x7f080002;
-        public static final int countryName=0x7f08001b;
-        public static final int countryQuestion=0x7f08001c;
-        public static final int exit_feint=0x7f080020;
-        public static final int feedback=0x7f080000;
-        public static final int frameLayout=0x7f08000c;
-        public static final int home=0x7f08001e;
-        public static final int iv_torch=0x7f08001a;
-        public static final int linearLayout1=0x7f080013;
-        public static final int linearLayout2=0x7f080018;
-        public static final int nested_window_root=0x7f08000b;
-        public static final int next=0x7f080001;
-        public static final int of_achievement_icon=0x7f080004;
-        public static final int of_achievement_icon_frame=0x7f080005;
-        public static final int of_achievement_notification=0x7f080003;
-        public static final int of_achievement_progress_icon=0x7f080009;
-        public static final int of_achievement_score=0x7f080007;
-        public static final int of_achievement_score_icon=0x7f080008;
-        public static final int of_achievement_text=0x7f080006;
-        public static final int of_icon=0x7f08000f;
-        public static final int of_ll_logo_image=0x7f08000e;
-        public static final int of_text=0x7f080010;
-        public static final int of_text1=0x7f080011;
-        public static final int of_text2=0x7f080012;
-        public static final int progress=0x7f08000a;
-        public static final int settings=0x7f08001f;
-        public static final int web_view=0x7f08000d;
+        public static final int answer=0x7f09001c;
+        public static final int b_countdown=0x7f090018;
+        public static final int b_follow=0x7f090016;
+        public static final int b_info=0x7f090017;
+        public static final int b_play=0x7f090014;
+        public static final int b_stats=0x7f090015;
+        public static final int button1=0x7f090002;
+        public static final int countryName=0x7f09001a;
+        public static final int countryQuestion=0x7f09001b;
+        public static final int exit_feint=0x7f09001f;
+        public static final int feedback=0x7f090000;
+        public static final int frameLayout=0x7f09000c;
+        public static final int home=0x7f09001d;
+        public static final int iv_torch=0x7f090019;
+        public static final int linearLayout1=0x7f090013;
+        public static final int nested_window_root=0x7f09000b;
+        public static final int next=0x7f090001;
+        public static final int of_achievement_icon=0x7f090004;
+        public static final int of_achievement_icon_frame=0x7f090005;
+        public static final int of_achievement_notification=0x7f090003;
+        public static final int of_achievement_progress_icon=0x7f090009;
+        public static final int of_achievement_score=0x7f090007;
+        public static final int of_achievement_score_icon=0x7f090008;
+        public static final int of_achievement_text=0x7f090006;
+        public static final int of_icon=0x7f09000f;
+        public static final int of_ll_logo_image=0x7f09000e;
+        public static final int of_text=0x7f090010;
+        public static final int of_text1=0x7f090011;
+        public static final int of_text2=0x7f090012;
+        public static final int progress=0x7f09000a;
+        public static final int settings=0x7f09001e;
+        public static final int web_view=0x7f09000d;
     }
     public static final class layout {
         public static final int answer=0x7f030000;
@@ -104,58 +105,58 @@ public final class R {
         public static final int question=0x7f030008;
     }
     public static final class menu {
-        public static final int of_dashboard=0x7f070000;
+        public static final int of_dashboard=0x7f080000;
     }
     public static final class string {
-        public static final int app_name=0x7f05002d;
-        public static final int hello=0x7f05002c;
-        public static final int of_achievement_load_null=0x7f050008;
-        public static final int of_achievement_unlock_null=0x7f050007;
-        public static final int of_achievement_unlocked=0x7f050018;
-        public static final int of_banned_dialog=0x7f050025;
-        public static final int of_bitmap_decode_error=0x7f05001a;
-        public static final int of_cancel=0x7f050014;
-        public static final int of_cant_compress_blob=0x7f050016;
-        public static final int of_crash_report_query=0x7f050022;
-        public static final int of_device=0x7f05000f;
-        public static final int of_error_parsing_error_message=0x7f05001c;
-        public static final int of_exit_feint=0x7f050027;
-        public static final int of_file_not_found=0x7f05001b;
-        public static final int of_home=0x7f050024;
-        public static final int of_id_cannot_be_null=0x7f050002;
-        public static final int of_io_exception_on_download=0x7f050015;
-        public static final int of_ioexception_reading_body=0x7f05001e;
-        public static final int of_key_cannot_be_null=0x7f050000;
-        public static final int of_loading_feint=0x7f050010;
-        public static final int of_low_memory_profile_pic=0x7f05000a;
-        public static final int of_malformed_request_error=0x7f05002b;
-        public static final int of_name_cannot_be_null=0x7f050003;
-        public static final int of_no=0x7f050011;
-        public static final int of_no_blob=0x7f050017;
-        public static final int of_no_video=0x7f050023;
-        public static final int of_nodisk=0x7f05000c;
-        public static final int of_now_logged_in_as_format=0x7f050020;
-        public static final int of_null_icon_url=0x7f050006;
-        public static final int of_offline_notification=0x7f050028;
-        public static final int of_offline_notification_line2=0x7f050029;
-        public static final int of_ok=0x7f050013;
-        public static final int of_operation_not_permitted_due_to_parental_controls=0x7f05000d;
-        public static final int of_profile_pic_changed=0x7f050021;
-        public static final int of_profile_picture_download_failed=0x7f05000b;
-        public static final int of_profile_url_null=0x7f050009;
-        public static final int of_score_submitted_notification=0x7f05002a;
-        public static final int of_sdcard=0x7f05000e;
-        public static final int of_secret_cannot_be_null=0x7f050001;
-        public static final int of_server_error_code_format=0x7f05001d;
-        public static final int of_settings=0x7f050026;
-        public static final int of_switched_accounts=0x7f05001f;
-        public static final int of_timeout=0x7f050019;
-        public static final int of_unexpected_response_format=0x7f050004;
-        public static final int of_unknown_server_error=0x7f050005;
-        public static final int of_yes=0x7f050012;
+        public static final int app_name=0x7f06002d;
+        public static final int hello=0x7f06002c;
+        public static final int of_achievement_load_null=0x7f060008;
+        public static final int of_achievement_unlock_null=0x7f060007;
+        public static final int of_achievement_unlocked=0x7f060018;
+        public static final int of_banned_dialog=0x7f060025;
+        public static final int of_bitmap_decode_error=0x7f06001a;
+        public static final int of_cancel=0x7f060014;
+        public static final int of_cant_compress_blob=0x7f060016;
+        public static final int of_crash_report_query=0x7f060022;
+        public static final int of_device=0x7f06000f;
+        public static final int of_error_parsing_error_message=0x7f06001c;
+        public static final int of_exit_feint=0x7f060027;
+        public static final int of_file_not_found=0x7f06001b;
+        public static final int of_home=0x7f060024;
+        public static final int of_id_cannot_be_null=0x7f060002;
+        public static final int of_io_exception_on_download=0x7f060015;
+        public static final int of_ioexception_reading_body=0x7f06001e;
+        public static final int of_key_cannot_be_null=0x7f060000;
+        public static final int of_loading_feint=0x7f060010;
+        public static final int of_low_memory_profile_pic=0x7f06000a;
+        public static final int of_malformed_request_error=0x7f06002b;
+        public static final int of_name_cannot_be_null=0x7f060003;
+        public static final int of_no=0x7f060011;
+        public static final int of_no_blob=0x7f060017;
+        public static final int of_no_video=0x7f060023;
+        public static final int of_nodisk=0x7f06000c;
+        public static final int of_now_logged_in_as_format=0x7f060020;
+        public static final int of_null_icon_url=0x7f060006;
+        public static final int of_offline_notification=0x7f060028;
+        public static final int of_offline_notification_line2=0x7f060029;
+        public static final int of_ok=0x7f060013;
+        public static final int of_operation_not_permitted_due_to_parental_controls=0x7f06000d;
+        public static final int of_profile_pic_changed=0x7f060021;
+        public static final int of_profile_picture_download_failed=0x7f06000b;
+        public static final int of_profile_url_null=0x7f060009;
+        public static final int of_score_submitted_notification=0x7f06002a;
+        public static final int of_sdcard=0x7f06000e;
+        public static final int of_secret_cannot_be_null=0x7f060001;
+        public static final int of_server_error_code_format=0x7f06001d;
+        public static final int of_settings=0x7f060026;
+        public static final int of_switched_accounts=0x7f06001f;
+        public static final int of_timeout=0x7f060019;
+        public static final int of_unexpected_response_format=0x7f060004;
+        public static final int of_unknown_server_error=0x7f060005;
+        public static final int of_yes=0x7f060012;
     }
     public static final class style {
-        public static final int OFLoading=0x7f060000;
-        public static final int OFNestedWindow=0x7f060001;
+        public static final int OFLoading=0x7f070000;
+        public static final int OFNestedWindow=0x7f070001;
     }
 }

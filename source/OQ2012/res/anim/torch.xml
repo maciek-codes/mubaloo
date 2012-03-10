@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/torch1" android:duration="100" />
+    <item android:drawable="@drawable/torch2" android:duration="100" />
+    <item android:drawable="@drawable/torch3" android:duration="100" />
+    <item android:drawable="@drawable/torch4" android:duration="100" />
+    <item android:drawable="@drawable/torch5" android:duration="100" />
+</animation-list>
