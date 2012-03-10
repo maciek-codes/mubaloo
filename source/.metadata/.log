@@ -1065,3 +1065,18 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/OpenFeintAPI/r
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 !SUBENTRY 1 org.eclipse.core.resources 4 368 2012-03-10 14:20:04.383
 !MESSAGE Resource '/OpenFeintAPI/res' does not exist.
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2012-03-10 14:56:34.729
+!MESSAGE oq2012activity.xml: Couldn't resolve resource @string/INFO
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2012-03-10 14:56:34.731
+!MESSAGE oq2012activity.xml: You must supply a layout_width attribute.
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2012-03-10 15:00:09.351
+!MESSAGE oq2012activity.xml: You must supply a layout_width attribute.
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2012-03-10 15:00:38.312
+!MESSAGE oq2012activity.xml: You must supply a layout_width attribute.
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2012-03-10 15:00:40.706
+!MESSAGE oq2012activity.xml: You must supply a layout_width attribute.

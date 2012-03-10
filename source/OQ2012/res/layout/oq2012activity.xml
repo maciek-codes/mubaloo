@@ -6,14 +6,14 @@
   android:layout_height="fill_parent"
   android:background="@drawable/background">
     <LinearLayout android:orientation="vertical" android:layout_width="150dp" android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentLeft="true" android:layout_marginLeft="33dp" android:layout_marginTop="33dp" android:layout_marginBottom="33dp">
-        <Button android:text="PLAY!" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/b_play" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button"></Button>
-        <Button android:text="STATS" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/b_stats" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button"></Button>
-        <Button android:text="FOLLOW" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/b_follow" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button"></Button>
-        <Button android:text="INFO" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/b_info" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button"></Button>
+        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/b_play" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button"></Button>
+        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/b_stats" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button"></Button>
+        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/b_follow" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button"></Button>
+        <Button android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/b_info" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button"></Button>
     </LinearLayout>
     
      <LinearLayout android:orientation="vertical" android:layout_width="150dp" android:id="@+id/linearLayout2" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentRight="true" android:layout_marginRight="33dp" android:layout_marginTop="33dp" android:layout_marginBottom="33dp">
-        <Button android:text="DAYS TO GO" android:layout_height="wrap_content" android:id="@+id/b_countdown" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button" android:layout_width="fill_parent"></Button>
+        <Button android:layout_height="wrap_content" android:id="@+id/b_countdown" android:textSize="16sp" android:textStyle="bold" android:background="@drawable/button" android:layout_width="fill_parent"></Button>
         <ImageView android:id="@+id/iv_torch" android:src="@drawable/torch1" android:layout_width="fill_parent" android:layout_height="wrap_content"></ImageView>
     </LinearLayout>
     

@@ -8,9 +8,11 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.openfeint.api.OpenFeint;
 import com.openfeint.api.OpenFeintDelegate;
@@ -82,6 +84,11 @@ public class OQ2012Activity extends Activity
         b_countdown.setTextColor(Color.WHITE);
         b_countdown.setTypeface(customFont);
         
+        /*ImageView iv_torch = (ImageView)findViewById(R.id.iv_torch);
+        iv_torch.setBackgroundResource(R.drawable.torch);
+        AnimationDrawable frameAnimation = (AnimationDrawable) iv_torch.getBackground();
+        frameAnimation.start();*/
+        
         // Button actions
         View.OnClickListener handler = new View.OnClickListener() 
         {
@@ -98,6 +105,7 @@ public class OQ2012Activity extends Activity
 					
 					case R.id.b_stats:
 						//GO TO SCREEN
+						Dashboard.open();
 					break;
 					
 					case R.id.b_follow:
