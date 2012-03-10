@@ -123,7 +123,5 @@ public class OQ2012Activity extends Activity
 		b_stats.setOnClickListener(handler);
 		b_follow.setOnClickListener(handler);
 		b_info.setOnClickListener(handler);
-
     }
-		
 }
