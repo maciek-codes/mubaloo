@@ -59,7 +59,7 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
 			if(!html.startsWith("["))
 				html = "["+html+"]";
 			JSONArray jsons = new JSONArray(html); 
-			jsonObj = jsons.getJSONObject(0);
+			jsonObj = jsons.getJSONObject(36);
 			getName = jsonObj.getString("name");
 			countryName.setText(getName);
 			JSONArray questions = jsonObj.getJSONArray("questions");
