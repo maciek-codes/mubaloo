@@ -1,8 +1,8 @@
 
 .metadata
 .DS_Store/
-source/QQ2012/bin
-source/QQ2012/gen
+source/OQ2012/bin/
+source/OQ2012/gen/
 
 # built application files
 *.apk
