@@ -37,9 +37,12 @@ public class Answer extends Activity implements OnClickListener {
         Button next = (Button) findViewById(R.id.next);
         
         
-        if(param1.equalsIgnoreCase("true")){
+        if(param1.equalsIgnoreCase("true")) {
         	score++;
-        	feedback.setText(score + " "+ i + " " + duration + "Congrats");
+        	
+        	feedback.setText("Your last score: "+score + " "+ i + " " + 
+        			duration + "\nCongratulations, you have won!");
+        	
         	if(duration <= 3000) Gold++;
         	if((duration > 3000)&&(duration <= 6000)) Silver++;
         	if((duration > 6000)&&(duration <= 12000)) Bronze++;
@@ -51,7 +54,7 @@ public class Answer extends Activity implements OnClickListener {
         		oq2012activity.getInstance().postLeaderboard(medal, 1);*/
         	
         }
-        else feedback.setText("!Congrats"); 
+        else feedback.setText("The answer is not correct. I am sorry."); 
 
 		View.OnClickListener handler = new View.OnClickListener() 
 		{
