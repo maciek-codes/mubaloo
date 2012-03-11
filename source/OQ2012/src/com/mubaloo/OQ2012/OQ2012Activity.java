@@ -191,7 +191,7 @@ public class OQ2012Activity extends Activity
     	}
     	};
     	
-    	new Handler().postDelayed(myAnimation, 1000);
+    	new Handler().postDelayed(myAnimation, 100);
 	}
     
     private void countdown()
