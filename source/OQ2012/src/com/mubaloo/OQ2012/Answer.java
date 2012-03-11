@@ -66,11 +66,13 @@ public class Answer extends Activity implements OnClickListener {
 				case R.id.next:
 					//GO TO SCREEN
 					i++;
+					
 					if(i == 3) {
 						if(Gold > 0) oq2012activity.getInstance().postLeaderboard("Gold", Gold);
 						if(Silver > 0) oq2012activity.getInstance().postLeaderboard("Silver", Silver);
 						if(Bronze > 0) oq2012activity.getInstance().postLeaderboard("Bronze", Bronze);
 						oq2012activity.getInstance().postLeaderboard("Points", score);
+						oq2012activity.getInstance().postLeaderboard("completed", oq2012activity.getInstance().getDaysLeft());
 						i = 0;
 						score = 0;
 						Gold = 0;

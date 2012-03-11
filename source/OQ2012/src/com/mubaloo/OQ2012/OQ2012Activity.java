@@ -53,10 +53,12 @@ public class OQ2012Activity extends Activity
 	int r_silvermedals;
 	int r_bronzemedals;
 	int r_points;
+	int r_completed;
 	int w_goldmedals = 0;
 	int w_silvermedals = 0;
 	int w_bronzemedals = 0;
 	int w_points = 0;
+	SharedPreferences myStats;
 	
     // Called when the activity is first created.
     @Override
@@ -105,11 +107,12 @@ public class OQ2012Activity extends Activity
         b_countdown.setTypeface(customFont);
         
         //Read Preferences File
-        SharedPreferences myStats = this.getSharedPreferences("myStats", Context.MODE_PRIVATE);
+        myStats = this.getSharedPreferences("myStats", Context.MODE_PRIVATE);
         r_goldmedals = myStats.getInt("gold_medals", 0);
         r_silvermedals = myStats.getInt("silver_medals", 0);
         r_bronzemedals = myStats.getInt("bronze_medals", 0);
         r_points = myStats.getInt("points", 0);
+        r_completed = myStats.getInt("completed", 0);
 
 		// Button actions
 		View.OnClickListener handler = new View.OnClickListener() 
@@ -121,6 +124,9 @@ public class OQ2012Activity extends Activity
 				{
 				case R.id.b_play:
 					//GO TO SCREEN
+					int days = getDaysLeft(), completed_days = myStats.getInt("completed", 0);
+					if ((days >= completed_days)&&(completed_days != 0)) return;
+					postLeaderboard("completed", 0);
 					Bundle bundleQ = new Bundle();
 					Intent play_Intent = new Intent(v.getContext(), Question.class);
 					play_Intent.putExtras(bundleQ);
@@ -181,17 +187,23 @@ public class OQ2012Activity extends Activity
     
     private void countdown()
     {
-    	Calendar c = Calendar.getInstance();
+    	int days = getDaysLeft();
+        b_countdown.setText(""+days);
+    }
+
+	public int getDaysLeft() {
+		Calendar c = Calendar.getInstance();
     	int start_day = 208+1;	// 27 July + leap year
     	int current_day = c.get(Calendar.DAY_OF_YEAR);
     	int days = start_day-current_day;
-        b_countdown.setText(""+days);
-    }
+		return days;
+	}
     
     public OQ2012Activity getInstance()
    	{
    		return instance;
    	}
+    
 
 	//post score to OpenFeint leaderboards
 	public void postLeaderboard(String BoardName, int score) {
@@ -202,10 +214,16 @@ public class OQ2012Activity extends Activity
 		SharedPreferences myStats = this.getSharedPreferences("myStats", Context.MODE_PRIVATE);
 		SharedPreferences.Editor myStatsEditor = myStats.edit();
 		//TODO delete this after testing!
-		r_points = 0;
+		/*r_points = 0;
 		r_goldmedals = 0;
 		r_silvermedals = 0;
-		r_bronzemedals = 0;
+		r_bronzemedals = 0;*/
+		if (BoardName=="completed")
+		{
+			myStatsEditor.putInt("completed", score);
+			myStatsEditor.commit();
+			return;
+		}
 		
 		if (BoardName=="Points")
 		{
@@ -249,6 +267,6 @@ public class OQ2012Activity extends Activity
 				Toast.makeText(OQ2012Activity.this, "Error (" + exceptionMessage + ") posting score.", Toast.LENGTH_SHORT).show();
 				OQ2012Activity.this.setResult(Activity.RESULT_CANCELED);
 			}
-		}); 
+		});
 	}
 }
