@@ -124,7 +124,7 @@ public class OQ2012Activity extends Activity
 				{
 				case R.id.b_play:
 					//GO TO SCREEN
-					int days = getDaysLeft(), completed_days = myStats.getInt("completed", 0);
+					int days = getDaysLeft(), completed_days = 0;//myStats.getInt("completed", 0);
 					
 					// Display a message that a user has to wait
 					if ((days >= completed_days)&&(completed_days != 0)) {
