@@ -125,7 +125,14 @@ public class OQ2012Activity extends Activity
 				case R.id.b_play:
 					//GO TO SCREEN
 					int days = getDaysLeft(), completed_days = myStats.getInt("completed", 0);
-					if ((days >= completed_days)&&(completed_days != 0)) return;
+					
+					// Display a message that a user has to wait
+					if ((days >= completed_days)&&(completed_days != 0)) {
+						Toast.makeText(v.getContext(), 
+								"Please try again tomorrow when new set of question arrives.",
+								Toast.LENGTH_SHORT).show();
+						return;
+					}
 					postLeaderboard("completed", 0);
 					Bundle bundleQ = new Bundle();
 					Intent play_Intent = new Intent(v.getContext(), Question.class);
