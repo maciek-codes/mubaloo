@@ -22,13 +22,11 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -86,7 +84,7 @@ public class Question extends Activity implements OnItemClickListener {
 			jsonObj = new JSONObject(html);
 
 			getName = jsonObj.getString("name");
-			countryName.setText(getName);
+			countryName.setText("Questions on "+getName);
 
 			// Get flag
 			View layout = findViewById(R.id.flagLayout); 
