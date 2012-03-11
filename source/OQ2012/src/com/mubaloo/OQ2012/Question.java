@@ -84,7 +84,7 @@ public class Question extends Activity implements OnItemClickListener {
 			jsonObj = new JSONObject(html);
 
 			getName = jsonObj.getString("name");
-			countryName.setText(getName);
+			countryName.setText("Questions on "+getName);
 
 			// Get flag
 			View layout = findViewById(R.id.flagLayout); 
