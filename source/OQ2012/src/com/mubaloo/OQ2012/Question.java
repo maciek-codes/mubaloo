@@ -129,7 +129,7 @@ public class Question extends Activity implements OnItemClickListener {
 			questionObj = questions.getJSONObject(i);
 
 			String question = questionObj.getString("question");
-			countryQuestion.setText(score + " " + i + question);
+			countryQuestion.setText("Your score: " + score + "\n" + (i+1) +". "+ question);
 			JSONArray answers = questionObj.getJSONArray("answers");
 			answ = new HashMap<String, Boolean>();
 			for(int i = 0; i < answers.length(); i++)

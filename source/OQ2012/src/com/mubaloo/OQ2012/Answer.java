@@ -22,8 +22,10 @@ public class Answer extends Activity implements OnClickListener {
         setContentView(R.layout.answer);
         
         TextView feedback;
+        TextView message;
     
         feedback = (TextView)findViewById(R.id.feedback);
+        message = (TextView)findViewById(R.id.message);
         
         Bundle bundle = this.getIntent().getExtras();
         String param1 = bundle.getString("Feedback");
@@ -40,19 +42,27 @@ public class Answer extends Activity implements OnClickListener {
         if(param1.equalsIgnoreCase("true")) {
         	score++;
         	
-        	feedback.setText("Your last score: "+score + " "+ i + " " + 
-        			duration + "\nCongratulations, you have won!");
+        	feedback.setText("Congratulations, you answered correctly!\n You took "+duration+"ms to answer.");
         	
-        	if(duration <= 3000) Gold++;
-        	if((duration > 3000)&&(duration <= 6000)) Silver++;
-        	if((duration > 6000)&&(duration <= 12000)) Bronze++;
+        	View mlayout = findViewById(R.id.medal);
+            
         	
-        	/*SHOULD ONLY ADD TO LEADERBOARD IF ANSWER WAS CORRECT!!*/
-        	//add points to leaderboard
-        	
-        	/*if (medal!="") //then player got a medal
-        		oq2012activity.getInstance().postLeaderboard(medal, 1);*/
-        	
+        	if(duration <= 3000) {
+        		Gold++;
+        		message.setText("A gold medal has been awarded to you!");
+        		mlayout.setBackgroundResource(R.drawable.mgold);
+        	}
+        	if((duration > 3000)&&(duration <= 6000)){
+        		Silver++;
+        		message.setText("A silver medal has been awarded to you!");
+        		mlayout.setBackgroundResource(R.drawable.msilver);
+        	}
+        	if((duration > 6000)&&(duration <= 12000)) {
+        		Bronze++;
+        		message.setText("A bronze medal has been awarded to you!");
+        		mlayout.setBackgroundResource(R.drawable.mbronze);
+        	}
+       	
         }
         else feedback.setText("The answer is not correct. I am sorry."); 
 
