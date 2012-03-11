@@ -2,9 +2,13 @@ package com.mubaloo.OQ2012;
 
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
+import android.appwidget.AppWidgetManager;
+import android.appwidget.AppWidgetProviderInfo;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -18,6 +22,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RemoteViews;
 import android.widget.Toast;
 
 import com.openfeint.api.OpenFeint;
@@ -126,7 +131,7 @@ public class OQ2012Activity extends Activity
 					//GO TO SCREEN
 					int days = getDaysLeft(), completed_days = myStats.getInt("completed", 0);
 					//TODO delete afterwards
-					completed_days = 0;
+					//completed_days = 0;
 					
 					// Display a message that a user has to wait
 					if ((days >= completed_days)&&(completed_days != 0)) {
@@ -277,5 +282,26 @@ public class OQ2012Activity extends Activity
 				OQ2012Activity.this.setResult(Activity.RESULT_CANCELED);
 			}
 		});
+	}
+	
+	@Override
+	public void onPause() {
+		super.onPause();
+		//Intent intent = new Intent(this, WidgetProvider.class);
+		//intent.setAction("android.appwidget.action.APPWIDGET_UPDATE");
+		ComponentName thisAppWidget = new ComponentName(this.getPackageName(), WidgetProvider.class.getName());
+		AppWidgetManager manager = AppWidgetManager.getInstance(this);
+		int[] a = manager.getAppWidgetIds(thisAppWidget);
+		List<AppWidgetProviderInfo> b = manager.getInstalledProviders();
+		for (AppWidgetProviderInfo i : b) {
+			if (i.provider.getPackageName().endsWith("pkg")) {
+				a = manager.getAppWidgetIds(i.provider);
+			}
+		}
+		new WidgetProvider().onUpdate(this, manager, a);
+		/*RemoteViews views = new RemoteViews(this.getPackageName(), R.layout.widget);
+		thisAppWidget..getAppWidgetIds(thisAppWidget);
+		AppWidgetManager.getInstance(this).updateAppWidget(thisAppWidget, views);
+		sendBroadcast(intent);*/
 	}
 }

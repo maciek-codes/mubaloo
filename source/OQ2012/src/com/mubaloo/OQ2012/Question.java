@@ -149,7 +149,7 @@ public class Question extends Activity implements OnItemClickListener {
 			start = System.currentTimeMillis();
 			countdown.setMax(12000);
 			countdown.setHorizontalFadingEdgeEnabled(true);
-			new CountDownTimer(12000, 50) 
+			new CountDownTimer(12000, 100) 
 			{
 				public void onTick(long millisUntilFinished) 
 				{
