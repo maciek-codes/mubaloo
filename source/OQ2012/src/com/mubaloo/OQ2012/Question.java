@@ -147,7 +147,8 @@ public class Question extends Activity implements OnItemClickListener {
 				public void onTick(long millisUntilFinished) 
 				{
 					start = System.currentTimeMillis();
-					answer_list.setAdapter(new ArrayAdapter<String>(context, android.R.layout.simple_list_item_1, android.R.id.text1, Answers));
+					answer_list.setAdapter(new ArrayAdapter<String>(
+							context, android.R.layout.simple_list_item_single_choice, Answers));
 					answer_list.setOnItemClickListener((OnItemClickListener) context);
 				}
 
