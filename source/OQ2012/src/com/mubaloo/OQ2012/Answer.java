@@ -40,31 +40,35 @@ public class Answer extends Activity implements OnClickListener {
         
         
         if(param1.equalsIgnoreCase("true")) {
-        	score++;
         	
-        	feedback.setText("Congratulations, you answered correctly!\n You took "+duration+"ms to answer.");
-        	
+        	String result = String.format("%.1f", duration/(float)1000);
         	View mlayout = findViewById(R.id.medal);
-            
         	
-        	if(duration <= 3000) {
+        	score++;
+
+        	feedback.setText("Congratulations, you answered correctly!\n You took "+result+" sec(s) to answer.\n");
+        	
+        	if(duration <= 2000) {
         		Gold++;
         		message.setText("A gold medal has been awarded to you!");
         		mlayout.setBackgroundResource(R.drawable.mgold);
         	}
-        	if((duration > 3000)&&(duration <= 6000)){
+        	else if((duration > 2000)&&(duration <= 5000)){
         		Silver++;
         		message.setText("A silver medal has been awarded to you!");
         		mlayout.setBackgroundResource(R.drawable.msilver);
         	}
-        	if((duration > 6000)&&(duration <= 12000)) {
+        	else if((duration > 5000)&&(duration <= 8000)) {
         		Bronze++;
         		message.setText("A bronze medal has been awarded to you!");
         		mlayout.setBackgroundResource(R.drawable.mbronze);
         	}
+        	else {
+        		message.setText("you were too slow for a medal...");
+        	}
        	
         }
-        else feedback.setText("The answer is not correct. I am sorry."); 
+        else feedback.setText("The answer was not correct or you didn't give an answer in time."); 
 
 		View.OnClickListener handler = new View.OnClickListener() 
 		{

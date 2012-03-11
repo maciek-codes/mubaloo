@@ -141,12 +141,12 @@ public class Question extends Activity implements OnItemClickListener {
 			List<String> answerList = new ArrayList<String>(answ.keySet());
 			Collections.shuffle(answerList);
 			Answers = answerList.toArray(new String[answerList.size()]);
-
+			start = System.currentTimeMillis();
 			new CountDownTimer(12000, 1000) 
 			{
 				public void onTick(long millisUntilFinished) 
 				{
-					start = System.currentTimeMillis();
+					
 					answer_list.setAdapter(new ArrayAdapter<String>(
 							context, android.R.layout.simple_list_item_single_choice, Answers));
 					answer_list.setOnItemClickListener((OnItemClickListener) context);
