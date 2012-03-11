@@ -210,6 +210,11 @@ public class OQ2012Activity extends Activity
 		//Declare prefernces file
 		SharedPreferences myStats = this.getSharedPreferences("myStats", Context.MODE_PRIVATE);
 		SharedPreferences.Editor myStatsEditor = myStats.edit();
+		//TODO delete this after testing!
+		r_points = 0;
+		r_goldmedals = 0;
+		r_silvermedals = 0;
+		r_bronzemedals = 0;
 		
 		if (BoardName=="Points")
 		{
