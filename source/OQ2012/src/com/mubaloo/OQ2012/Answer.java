@@ -125,7 +125,6 @@ public class Answer extends Activity implements OnClickListener {
 		switch (v.getId()) {
 		case R.id.next:
 			break;
-			// TODO Auto-generated method stub
 		}
 	}
 }

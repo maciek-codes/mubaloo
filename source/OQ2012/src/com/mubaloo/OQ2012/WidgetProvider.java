@@ -50,7 +50,11 @@ public class WidgetProvider extends AppWidgetProvider {
 		 views.setOnClickPendingIntent(R.id.widgetLayout, pendingIntent);
 		 
 		 int completed_days = myStats.getInt("completed", 0);
+		 int G_medals = myStats.getInt("gold_medals", 0);
+		 int S_medals = myStats.getInt("silver_medals", 0);
+		 int B_medals = myStats.getInt("bronze_medals", 0);
 		 views.setTextViewText(R.id.widget_title, "Olympic Quiz 2012");
+		 views.setTextViewText(R.id.widget_medals, "Medal Count\nGold medals: "+G_medals+"\n"+"Silver medals: "+S_medals+"\n"+"Bronze medals: "+B_medals);
 		 int days = getDaysLeft();
 		// Display a message that a user has to wait
 		if ((days >= completed_days)&&(completed_days != 0)) {
