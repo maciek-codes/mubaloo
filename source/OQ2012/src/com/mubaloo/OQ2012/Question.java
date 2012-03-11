@@ -35,7 +35,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class Question extends Activity implements OnClickListener, OnItemClickListener{
+public class Question extends Activity implements OnItemClickListener {
 	private ListView answer_list;
 	private Map<String, Boolean> answ;
 	public int i;
@@ -93,8 +93,7 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
 			try 
 			{
 				String imageUrl = jsonObj.getString("image_url");
-				bitmap = BitmapFactory.decodeStream(
-						(InputStream)new URL(imageUrl).getContent());
+				bitmap = BitmapHelper.get(new URL(imageUrl));
 				Drawable d = new BitmapDrawable(bitmap);
 				layout.setBackgroundDrawable(d);
 			} 
@@ -208,15 +207,4 @@ public class Question extends Activity implements OnClickListener, OnItemClickLi
 		startActivityForResult(ans_Intent, 0);
 		isfinished = true;
 	}
-	@Override
-	public void onClick(View v) {
-
-	}
-	
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-		bitmap.recycle();
-	}
-
 }
