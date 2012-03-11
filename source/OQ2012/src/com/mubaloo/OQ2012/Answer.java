@@ -2,11 +2,14 @@ package com.mubaloo.OQ2012;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Answer extends Activity implements OnClickListener {
 	private Bundle bundleQ = new Bundle();
@@ -37,7 +40,8 @@ public class Answer extends Activity implements OnClickListener {
         Bronze = bundle.getInt("Bronze");
         
         Button next = (Button) findViewById(R.id.next);
-        
+        next.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/LONDON2012.TTF"));
+        next.setTextColor(Color.WHITE);
         
         if(param1.equalsIgnoreCase("true")) {
         	
@@ -92,9 +96,11 @@ public class Answer extends Activity implements OnClickListener {
 						Gold = 0;
 						Silver = 0;
 						Bronze = 0;
-						
 						Intent main_Intent = new Intent(v.getContext(), OQ2012Activity.class);
 						startActivityForResult(main_Intent,0);
+						Toast.makeText(v.getContext(), 
+								"Thank you for playing. Come back for more questions tomorrow.",
+								Toast.LENGTH_SHORT).show();
 					}
 					else {
 						bundleQ.putInt("number", i);

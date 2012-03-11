@@ -23,7 +23,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:paddingTop="40sp"
          />
 
     <Button
@@ -35,6 +34,10 @@
         android:paddingLeft="43sp"
         android:paddingRight="43sp"
         android:paddingTop="23sp"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/button"
+            android:textSize="32sp"
+            android:textStyle="bold"
         android:text="Next" />
 
 </LinearLayout>

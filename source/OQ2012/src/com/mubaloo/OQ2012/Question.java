@@ -31,6 +31,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class Question extends Activity implements OnItemClickListener {
@@ -49,21 +50,25 @@ public class Question extends Activity implements OnItemClickListener {
 	String[] Answers;
 	private boolean isfinished;
 	Bitmap bitmap;
+	//TextView countdown;
+	ProgressBar countdown;
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.question);
 		String getName = null;
-		TextView countryName = (TextView)findViewById(R.id.countryName);
+		final TextView countryName = (TextView)findViewById(R.id.countryName);
 		TextView countryQuestion = (TextView)findViewById(R.id.countryQuestion);
-
+		//countdown = (TextView)findViewById(R.id.countdown);
+		countdown = (ProgressBar)findViewById(R.id.progressBar1);
+		
 		context = this;
 		answer_list = (ListView)findViewById(R.id.answer);
 		InputStream is;
 		JSONObject jsonObj;
 
 		try {
-
+			countdown.setMax(12000);
 			Calendar c = Calendar.getInstance();
 			int start_day = 208+1; // 27 July + leap year
 			int current_day = c.get(Calendar.DAY_OF_YEAR);
@@ -142,14 +147,16 @@ public class Question extends Activity implements OnItemClickListener {
 			Collections.shuffle(answerList);
 			Answers = answerList.toArray(new String[answerList.size()]);
 			start = System.currentTimeMillis();
-			new CountDownTimer(12000, 1000) 
+			countdown.setMax(12000);
+			countdown.setHorizontalFadingEdgeEnabled(true);
+			new CountDownTimer(12000, 50) 
 			{
 				public void onTick(long millisUntilFinished) 
 				{
-					
 					answer_list.setAdapter(new ArrayAdapter<String>(
-							context, android.R.layout.simple_list_item_checked, Answers));
+					context, android.R.layout.simple_list_item_checked, Answers));
 					answer_list.setOnItemClickListener((OnItemClickListener) context);
+					countdown.setProgress((int)millisUntilFinished);
 				}
 
 				public void onFinish() 

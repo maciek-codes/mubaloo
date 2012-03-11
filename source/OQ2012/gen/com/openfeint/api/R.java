@@ -64,20 +64,21 @@ public final class R {
     }
     public static final class id {
         public static final int ansLayout=0x7f090000;
-        public static final int answer=0x7f090022;
+        public static final int answer=0x7f090024;
         public static final int b_countdown=0x7f09001d;
         public static final int b_follow=0x7f09001b;
         public static final int b_info=0x7f09001c;
         public static final int b_play=0x7f090019;
         public static final int b_stats=0x7f09001a;
         public static final int button1=0x7f090006;
-        public static final int countryName=0x7f090020;
-        public static final int countryQuestion=0x7f090021;
-        public static final int exit_feint=0x7f090025;
+        public static final int countdown=0x7f090023;
+        public static final int countryName=0x7f090021;
+        public static final int countryQuestion=0x7f090022;
+        public static final int exit_feint=0x7f090027;
         public static final int feedback=0x7f090001;
         public static final int flagLayout=0x7f09001f;
         public static final int frameLayout=0x7f090010;
-        public static final int home=0x7f090023;
+        public static final int home=0x7f090025;
         public static final int iv_torch=0x7f09001e;
         public static final int linearLayout1=0x7f090018;
         public static final int medal=0x7f090003;
@@ -97,8 +98,9 @@ public final class R {
         public static final int of_text1=0x7f090015;
         public static final int of_text2=0x7f090016;
         public static final int progress=0x7f09000e;
+        public static final int progressBar1=0x7f090020;
         public static final int relativeLayout=0x7f090017;
-        public static final int settings=0x7f090024;
+        public static final int settings=0x7f090026;
         public static final int tv_info=0x7f090005;
         public static final int web_view=0x7f090011;
     }
