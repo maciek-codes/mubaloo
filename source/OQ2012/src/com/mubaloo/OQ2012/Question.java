@@ -148,7 +148,7 @@ public class Question extends Activity implements OnItemClickListener {
 				{
 					
 					answer_list.setAdapter(new ArrayAdapter<String>(
-							context, android.R.layout.simple_list_item_single_choice, Answers));
+							context, android.R.layout.simple_list_item_checked, Answers));
 					answer_list.setOnItemClickListener((OnItemClickListener) context);
 				}
 
